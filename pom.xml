@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>pom</packaging>
+  <modules>
+    <module>application/starter</module>
+    <module>application/dubbo/dubbo-api</module>
+    <module>application/dubbo/dubbo-impl</module>
+    <module>application/http/http-api</module>
+    <module>application/http/http-impl</module>
+    <module>application/scheduler</module>
+    <module>application/consumer</module>
+    <module>domain/rpc</module>
+    <module>domain/repository</module>
+    <module>domain/publisher</module>
+    <module>domain/biz/service</module>
+    <module>domain/biz/service-impl</module>
+    <module>infrastructure/rpc-impl</module>
+    <module>infrastructure/publisher-impl</module>
+    <module>infrastructure/repository-impl</module>
+  </modules>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.7.RELEASE</version>
+    <relativePath/>
+  </parent>
+  <groupId>com.catface.ddd</groupId>
+  <artifactId>ddd-demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>ddd-demo</name>
+  <description>ddd-demo</description>
+
+  <properties>
+    <java.version>1.8</java.version>
+    <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- 本地module begin-->
+
+
+      <!-- 应用层 begin-->
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>dubbo-api</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>dubbo-impl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>http-api</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>http-impl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>consumer</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>scheduler</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <!-- 应用层 end-->
+
+
+      <!-- 领域层 begin -->
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>service</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>service-impl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>publisher</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>repository</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>rpc</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <!-- 领域层 end -->
+
+
+      <!-- 基础设施层 begin -->
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>publisher-impl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>repository-impl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>rpc-impl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <!-- 基础设施层 end -->
+
+      <!-- 本地 module end -->
+
+      <!-- 框架 begin -->
+
+      <!-- dubbo start -->
+      <dependency>
+        <groupId>org.apache.dubbo</groupId>
+        <artifactId>dubbo-spring-boot-starter</artifactId>
+        <version>3.0.4</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.dubbo</groupId>
+        <artifactId>dubbo-spring-boot-autoconfigure</artifactId>
+        <version>3.0.4</version>
+      </dependency>
+      <!-- dubbo end-->
+
+      <!-- ons start -->
+      <dependency>
+        <groupId>com.aliyun.openservices</groupId>
+        <artifactId>ons-client</artifactId>
+        <version>1.8.7.1.Final</version>
+      </dependency>
+      <!-- ons end -->
+
+      <!-- 框架 end -->
+
+      <!-- 工具 begin -->
+      <dependency>
+        <artifactId>logstash-logback-encoder</artifactId>
+        <groupId>net.logstash.logback</groupId>
+        <version>5.1</version>
+      </dependency>
+      <!-- 工具 end -->
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <!-- 不忽略deploy -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <skip>false</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.3</version>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

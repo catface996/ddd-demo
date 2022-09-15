@@ -1,0 +1,6 @@
+dubbo:
+  application:
+    name: ddd-demo
+  registry:
+    address: acos://nacos-dev.chuanyinet.com:8848?username=nacos-dev-new&password=Ed8SScc7_F5vzKG3.-ny
+    id: ddd-demo
