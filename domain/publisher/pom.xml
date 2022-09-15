@@ -10,6 +10,12 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>publisher</artifactId>
   <name>publisher</name>
+  <dependencies>
+    <dependency>
+      <groupId>com.catface.ddd</groupId>
+      <artifactId>common-model</artifactId>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <!-- 忽略deploy -->

@@ -20,6 +20,7 @@
     <module>infrastructure/rpc-impl</module>
     <module>infrastructure/publisher-impl</module>
     <module>infrastructure/repository-impl</module>
+    <module>domain/common-model</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -86,6 +87,11 @@
 
 
       <!-- 领域层 begin -->
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>common-model</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
       <dependency>
         <groupId>com.catface.ddd</groupId>
         <artifactId>service</artifactId>
@@ -165,6 +171,40 @@
         <groupId>net.logstash.logback</groupId>
         <version>5.1</version>
       </dependency>
+      <!-- swagger 文档 begin -->
+      <dependency>
+        <groupId>com.github.xiaoymin</groupId>
+        <artifactId>swagger-bootstrap-ui</artifactId>
+        <version>1.9.6</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>2.9.2</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>guava</artifactId>
+            <groupId>com.google.guava</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>2.9.2</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>guava</artifactId>
+            <groupId>com.google.guava</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>io.swagger</groupId>
+        <artifactId>swagger-annotations</artifactId>
+        <version>1.5.20</version>
+      </dependency>
+      <!-- swagger 文档 end -->
       <!-- 工具 end -->
     </dependencies>
   </dependencyManagement>

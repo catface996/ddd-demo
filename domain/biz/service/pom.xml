@@ -14,6 +14,10 @@
   <dependencies>
     <dependency>
       <groupId>com.catface.ddd</groupId>
+      <artifactId>common-model</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.catface.ddd</groupId>
       <artifactId>repository</artifactId>
     </dependency>
     <dependency>
