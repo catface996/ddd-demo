@@ -204,6 +204,11 @@
         <artifactId>swagger-annotations</artifactId>
         <version>1.5.20</version>
       </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>27.0.1-jre</version>
+      </dependency>
       <!-- swagger 文档 end -->
       <!-- 工具 end -->
     </dependencies>

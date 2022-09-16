@@ -10,4 +10,6 @@ public class SwaggerTagConst {
 
   public static final String DEMO = "样例";
 
+  public static final String FOO = "foo";
+
 }
