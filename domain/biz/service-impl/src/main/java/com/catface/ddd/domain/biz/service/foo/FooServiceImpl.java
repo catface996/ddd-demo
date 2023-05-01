@@ -28,8 +28,8 @@ public class FooServiceImpl implements FooService {
    */
   @Override
   public Foo sayHello(Bar bar) {
-    Bar barFromRepository = barRepository.findById(bar.getId());
-    log.info("foo跟bar打招呼,bar:{}",barFromRepository);
+    Bar barEntity = barRepository.findById(bar.getId());
+    log.info("foo跟bar打招呼,bar:{}",barEntity);
     return new Foo(1L, "王大锤,哇呀呀");
   }
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catface.ddd.repository.mysql.mybatis.mapper.SubOrderMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, member_id, main_order_id, sub_config_id, sub_order_context, tcc_status, max_try_times, real_try_times, max_confirm_times, real_confirm_times, max_cancel_times, real_cancel_times, auto_confirm, gmt_created, gmt_modified
+    </sql>
+
+</mapper>

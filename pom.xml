@@ -16,11 +16,13 @@
     <module>domain/repository</module>
     <module>domain/publisher</module>
     <module>domain/biz/service</module>
+    <module>domain/common-model</module>
     <module>domain/biz/service-impl</module>
     <module>infrastructure/rpc-impl</module>
-    <module>infrastructure/publisher-impl</module>
-    <module>infrastructure/repository-impl</module>
-    <module>domain/common-model</module>
+    <module>infrastructure/publisher-rocketmq-impl</module>
+    <module>infrastructure/publisher-kafka-impl</module>
+    <module>infrastructure/repository-mysql-impl</module>
+    <module>infrastructure/repository-mongodb-impl</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -123,12 +125,22 @@
       <!-- 基础设施层 begin -->
       <dependency>
         <groupId>com.catface.ddd</groupId>
-        <artifactId>publisher-impl</artifactId>
+        <artifactId>publisher-rocketmq-impl</artifactId>
         <version>0.0.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.catface.ddd</groupId>
-        <artifactId>repository-impl</artifactId>
+        <artifactId>publisher-kafka-impl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>repository-mysql-impl</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.catface.ddd</groupId>
+        <artifactId>repository-mongodb-impl</artifactId>
         <version>0.0.1-SNAPSHOT</version>
       </dependency>
       <dependency>
