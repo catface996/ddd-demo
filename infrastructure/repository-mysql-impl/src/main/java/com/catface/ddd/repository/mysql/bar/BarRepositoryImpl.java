@@ -21,6 +21,7 @@ public class BarRepositoryImpl implements BarRepository {
    */
   @Override
   public Bar findById(Long id) {
+    log.info("this is mysql bar repository implements");
     return new Bar(id,"BarBar...");
   }
 }

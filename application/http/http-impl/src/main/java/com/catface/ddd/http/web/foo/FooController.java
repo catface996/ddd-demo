@@ -23,6 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FooController {
 
+  /**
+   * TODO Question: 能否在这里声明引入FooServiceImpl
+   */
   private final FooService fooService;
 
   public FooController(FooService fooService) {
@@ -32,6 +35,7 @@ public class FooController {
   @ApiOperation(value = "foo跟bar打招呼")
   @PostMapping(value = "/public/foo/sayHello")
   public String sayHello(@RequestBody @Valid SayHelloToBarRequest request) {
+    log.info("receive sayHello request:{}",request);
     Bar barEntity = FooWebConvert.convert(request);
     Foo fooEntity = fooService.sayHello(barEntity);
     return fooEntity.getDesc();
