@@ -6,12 +6,12 @@
   <packaging>pom</packaging>
   <modules>
     <module>application/starter</module>
-    <module>application/dubbo/dubbo-api</module>
-    <module>application/dubbo/dubbo-impl</module>
-    <module>application/http/http-api</module>
-    <module>application/http/http-impl</module>
-    <module>application/scheduler</module>
-    <module>application/consumer</module>
+    <module>traffic/dubbo/dubbo-api</module>
+    <module>traffic/dubbo/dubbo-impl</module>
+    <module>traffic/http/http-api</module>
+    <module>traffic/http/http-impl</module>
+    <module>traffic/scheduler</module>
+    <module>traffic/consumer</module>
     <module>domain/rpc</module>
     <module>domain/repository</module>
     <module>domain/publisher</module>
